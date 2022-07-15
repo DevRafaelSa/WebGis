@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+*{
+    margin: 0;
+}
+
+#map {
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logout{
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.admin{
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#interface{
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 65%);
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    padding: 11px;
+    font-family: 'Open Sans', -apple-system, 'Segoe UI', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.loading{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
+
+.loading h1 {
+    font-family: 'Open Sans', -apple-system, 'Segoe UI', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: hsl(0, 0%, 0%);
+    box-sizing: border-box;
+    margin: 1rem;
+  }
+
+.progressbar{
+    margin: 1rem;
+    height: 1px;
+    width: 10rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #bcb9b9;
+}
+
+.marker-selected{
+    /* filter: hue-rotate(220deg); */
+    border: 3px solid rgb(245, 245, 34);
+    border-radius: 50%;
+}
+
+.leaflet-popup-content *{
+    margin: 2px;
+}

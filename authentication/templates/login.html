@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block 'titulo' %}Login{% endblock %} {% block 'conteudo' %}
+{% load static %}
+
+<div class="container">
+    {% comment %} Avisos de ERRO PASSADOS PELO REQUEST {% endcomment %}
+    <br> {% if status == '1' %}  
+    <div class="alert alert-danger" role="alert">
+        Matrícula ou senha inválidos.
+    </div>
+
+    {% endif %} {% if status == '2' %}
+    <div class="alert alert-danger" role="alert">
+        Faça login antes de tentar acessar o sistema.
+    </div>
+
+    {% endif %}
+    {% comment %} Avisos de ERRO PASSADOS PELO REQUEST {% endcomment %}
+    <div class="row">
+
+        <div class="col-md-3">
+            
+        </div>
+
+        <div class="col-md" style="margin-top: 3rem; margin-bottom: 3rem;">
+            <img src="{% static 'assets/logo.png' %}" alt="logo">
+            <hr>
+           
+            {% if next %}   {% comment %}  Caso haja uma próxima página a ser redirecionada, recebido pelo request {% endcomment %}
+                <form action="{% url 'auth:valida_login' %}?next={{next}}" method="post" >
+            {%else%}
+                <form method="POST" action="{% url 'auth:valida_login' %}">
+            {% endif %}
+                {% csrf_token %}
+                    <label>Matrícula</label>
+                    <input name="matricula" class="form-control" type="text" value="" placeholder="Matrícula...">
+                    <br>
+                    <label>Senha</label>
+                    <input name="senha" class="form-control" type="password" value="" placeholder="Senha...">
+                    <br>
+                    <input class="btn btn-info btn-lg" type="submit" value="Autenticar">
+                    <a href="{% url 'auth:cadastro' %}" class="btn btn-warning btn-lg">Cadastro</a>
+            </form>
+        </div>
+
+        <div class="col-md-3">
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
