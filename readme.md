@@ -1,6 +1,14 @@
 # Webgis
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://gitlab.com/repositoriodafabrica/ex2022_1_webgis_viviano/-/tree/Calado-Tasks/task1)
+A Release1 do sistema foi desenvolvido na Fábrica de Software, na qual exerci as funções de Gerente de Projetos e Analista de Requisitos.
+
+Projeto desenvolvido em Python;
+Sistema em Rest API;
+
+Metodologia Ágil: Scrum, Kanban e XP;
+
+Planning Poker para estimar story points.
+
 
 Requisitos:
 
